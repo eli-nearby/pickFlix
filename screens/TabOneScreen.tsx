@@ -3,7 +3,10 @@ import {Dimensions, Image, StyleSheet, TouchableOpacity} from 'react-native';
 
 import { Text, View } from '../components/Themed';
 import Carousel from 'react-native-snap-carousel';
-// import Icon from 'react-native-ionicons'
+import { Ionicons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
+
+/* https://icons.expo.fyi/ */
 
 export default class TabOneScreen extends Component {
 
@@ -111,17 +114,33 @@ export default class TabOneScreen extends Component {
           />
           <View style={styles.footer}>
             <View style={styles.footerChild}>
-              <TouchableOpacity style={[styles.footerChildButton, {
-                backgroundColor: '#e73420'
-              }]}>
-
+              <TouchableOpacity style={styles.footerChildButton}>
+                <Feather
+                    name="x"
+                    size={32}
+                    color="#e73420"
+                    style={{marginTop: 4, marginLeft: 2}}
+                />
               </TouchableOpacity>
             </View>
             <View style={styles.footerChild}>
-              <TouchableOpacity style={[styles.footerChildButton, {
-                backgroundColor: '#34c33d'
-              }]}>
-                {/*<Icon name="add" />*/}
+              <TouchableOpacity style={styles.footerChildButton}>
+                <Feather
+                    name="share"
+                    size={28}
+                    color="#0271E0"
+                    style={{marginTop: 1, marginLeft: 1}}
+                />
+              </TouchableOpacity>
+            </View>
+            <View style={styles.footerChild}>
+              <TouchableOpacity style={styles.footerChildButton}>
+                <Feather
+                    name="heart"
+                    size={28}
+                    color="#34c33d"
+                    style={{marginTop: 4, marginLeft: 2}}
+                />
               </TouchableOpacity>
             </View>
           </View>
@@ -161,7 +180,7 @@ const styles = StyleSheet.create({
   },
   footerChild: {
     height: '100%',
-    width: '50%',
+    width: '25%',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -169,7 +188,9 @@ const styles = StyleSheet.create({
     height: 70,
     width: 70,
     borderRadius: 70/2,
-    backgroundColor: '#fff'
+    backgroundColor: '#111213',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   item: {
     borderRadius: 15,
